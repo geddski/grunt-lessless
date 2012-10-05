@@ -1,0 +1,41 @@
+{
+  "name": "grunt-lessless",
+  "description": "compile LESS into CSS, change links to point to the CSS files, remove less.js from page",
+  "version": "0.1.0",
+  "homepage": "https://github.com/geddesign/grunt-lessless",
+  "author": {
+    "name": "Dave Geddes",
+    "email": "davidcgeddes@gmail.com",
+    "url": "geddesign.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/geddesign/grunt-lessless"
+  },
+  "bugs": {
+    "url": "https://github.com/geddesign/grunt-lessless/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/geddesign/grunt-lessless/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "bin": "bin/grunt-lessless",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "dependencies": {
+    "lessless" : "0.2.x"
+  },  
+  "devDependencies": {
+    "grunt": "~0.4.0a"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
