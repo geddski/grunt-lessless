@@ -30,8 +30,15 @@ lessless: {
 }
 ```
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][grunt].
+There are also two optional settings:
+```js
+lessless: {
+  buildDir: 'path/to/frontend-build'
+  styleDirs: ['path/to/my/extra/styles'], //directories to look in for imports. usually don't need since any folder containing a .less file gets added to this automatically
+  stripExtensions: ['jsp', 'html'] //file extensions that have links to .less files. Defaults to just .html files.
+}
+```
+So a Java project would typically set `stripExtensions` to `['jsp', 'html']` and a .NET project would set it to `['cshtml', 'html']`. 
 
 ## Release History
 0.1.0 initial release. 
