@@ -11,7 +11,7 @@ var lessless = require('lessless');
 
 module.exports = function(grunt) {
 
-  grunt.registerTask('lessless', 'compile LESS into CSS via lessless', function() {
+  grunt.registerMultiTask('lessless', 'compile LESS into CSS via lessless', function() {
     //log with grunt
     lessless.setConsole({
       log: function(msg){
@@ -23,9 +23,9 @@ module.exports = function(grunt) {
     var done = this.async();
     // lessless.optimizeProject(grunt.config.get("requirejs.compile.options.dir"));
     lessless.optimizeProject(
-      grunt.config.get("lessless.buildDir"),
-      grunt.config.get('lessless.styledirs'),
-      grunt.config.get('lessless.stripExtensions')
+      this.data.buildDir,
+      this.data.styleDirs,
+      this.data.stripExtensions
       );
     done();
   });
