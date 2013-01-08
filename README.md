@@ -14,34 +14,66 @@ grunt.loadNpmTasks('grunt-lessless');
 [grunt]: https://github.com/cowboy/grunt
 [getting_started]: https://github.com/cowboy/grunt/blob/master/docs/getting_started.md
 
-## Documentation
-Add this to your Gruntfile.js:
+## Lessless task
+_Run this task with the `grunt lessless` command._
+
+_This task is a [multi task][] so any targets, files and options should be specified according to the [multi task][] documentation._
+[multi task]: https://github.com/gruntjs/grunt/wiki/Configuring-tasks
+
+### Options
+
+#### buildDir
+Type: `String`
+
+Directory to scan for less files.
+
+#### styleDirs
+Type: `String`
+Default: null
+
+Directories to look in for imports. Usually not needed since any folder containing a .less file gets added to this automatically.
+
+#### stripExtensions
+Type: `Array`
+Default: ['html']
+
+File extensions that have links to .less files.
+So a Java project would typically set `stripExtensions` to `['jsp', 'html']` and a .NET project would set it to `['cshtml', 'html']`. 
+
+### Usage Examples
 
 ```js
 lessless: {
-  buildDir: 'path/to/frontend-build'
+  compile: {
+    buildDir: 'path/to/frontend-build'
+  }
 }
 ```
+
 If you're using RequireJS then `buildDir` should match `dir` from your requirejs settings. With grunt you can even point to the same variable: 
 
 ```js
 lessless: {
-  buildDir: '<%= requirejs.compile.options.dir %>'
+  compile: {
+    buildDir: '<%= requirejs.compile.options.dir %>'
+  }
 }
 ```
 
 There are also two optional settings:
 ```js
 lessless: {
-  buildDir: 'path/to/frontend-build'
-  styleDirs: ['path/to/my/extra/styles'], //directories to look in for imports. usually don't need since any folder containing a .less file gets added to this automatically
-  stripExtensions: ['jsp', 'html'] //file extensions that have links to .less files. Defaults to just .html files.
+  compile: {
+    buildDir: 'path/to/frontend-build',
+    styleDirs: ['path/to/my/extra/styles'],
+    stripExtensions: ['jsp', 'html']
+  }
 }
 ```
-So a Java project would typically set `stripExtensions` to `['jsp', 'html']` and a .NET project would set it to `['cshtml', 'html']`. 
 
 ## Release History
-0.1.0 initial release. 
+- 0.1.1 Change to multitask
+- 0.1.0 initial release. 
 
 ## License
 Copyright (c) 2012 Dave Geddes  
