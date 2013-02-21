@@ -33,7 +33,10 @@
     "lessless" : "0.2.x"
   },  
   "devDependencies": {
-    "grunt": "~0.4.0a"
+    "grunt": "~0.4.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
   },
   "keywords": [
     "gruntplugin"
