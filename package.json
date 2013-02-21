@@ -1,7 +1,7 @@
 {
   "name": "grunt-lessless",
   "description": "compile LESS into CSS, change links to point to the CSS files, remove less.js from page",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/geddesign/grunt-lessless",
   "author": {
     "name": "Dave Geddes",
