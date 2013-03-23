@@ -1,6 +1,6 @@
 /*
  * grunt-lessless
- * https://github.com/geddesign/grunt-lessless
+ * https://github.com/geddski/grunt-lessless
  *
  * Copyright (c) 2012 Dave Geddes
  * Licensed under the MIT license.

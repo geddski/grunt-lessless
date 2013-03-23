@@ -1,6 +1,6 @@
 # grunt-lessless
 
-Grunt plugin for [lessless](http://github.com/geddesign/lessless), a tool that compiles LESS into CSS, changes links to point to the CSS files, removes less.js from HTML page(s). Very handy when you're using less.js in the browser but want to deploy CSS. 
+Grunt plugin for [lessless](http://github.com/geddski/lessless), a tool that compiles LESS into CSS, changes links to point to the CSS files, removes less.js from HTML page(s). Very handy when you're using less.js in the browser but want to deploy CSS. 
 
 ## Getting Started
 Install this grunt plugin next to your project's [Gruntfile][getting_started] with: `npm install grunt-lessless`
